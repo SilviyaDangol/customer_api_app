@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from db.database import get_db
-from schemas.schema import (
+from schemas.count_schema import (
     CountResponse,
     OverallCountsResponse,
 )
@@ -23,7 +23,7 @@ from crud.counts import (
 
 from config.logger import logger
 
-router = APIRouter(tags=["Counts"])
+router = APIRouter(prefix="/count", tags=["Counts"])
 
 
 # -------------------------

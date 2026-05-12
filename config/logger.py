@@ -20,3 +20,7 @@ f_handler.setFormatter(log_format)
 if not logger.handlers:
     logger.addHandler(c_handler)
     logger.addHandler(f_handler)
+
+
+def info(param):
+    return None

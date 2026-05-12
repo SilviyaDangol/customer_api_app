@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   db:
@@ -11,7 +10,6 @@ services:
     volumes:
 
       - ./app/sql/seed.sql:/docker-entrypoint-initdb.d/seed.sql
-      - postgres_data:/var/lib/postgresql/data   # ← this one
     restart: always
 
   api:

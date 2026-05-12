@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session, joinedload
 from models.model import Customer
-from schemas.schema import CustomerCreate, CustomerUpdate
+from schemas.customer_schemas import CustomerCreate, CustomerUpdate
 from config.logger import logger
 
 def get_customer(db: Session, customer_id: int):
