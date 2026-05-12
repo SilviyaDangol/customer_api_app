@@ -18,3 +18,17 @@
 2026-05-10 13:10:12,394 - customer_api - INFO - Initializing FastAPI application.
 2026-05-10 13:11:40,291 - customer_api - INFO - Initializing FastAPI application.
 2026-05-10 13:11:41,856 - customer_api - INFO - Initializing FastAPI application.
+2026-05-12 21:16:03,403 - customer_api - INFO - Initializing Async FastAPI application.
+2026-05-12 21:16:04,205 - customer_api - INFO - Initializing Async FastAPI application.
+2026-05-12 21:16:12,265 - customer_api - INFO - Received request on async root endpoint.
+2026-05-12 21:16:28,503 - customer_api - INFO - Initializing database connection.
+2026-05-12 21:16:28,504 - customer_api - INFO - GET /customers/count called
+2026-05-12 21:16:28,504 - customer_api - INFO - Starting customers count query
+2026-05-12 21:16:28,506 - customer_api - ERROR - Customers count failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-12 21:16:28,506 - customer_api - INFO - GET /customers/count success
+2026-05-12 21:16:28,507 - customer_api - INFO - Closing database connection.

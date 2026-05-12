@@ -9,7 +9,9 @@ services:
     ports:
       - "${POSTGRES_PORT}"
     volumes:
+
       - ./app/sql/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+      - postgres_data:/var/lib/postgresql/data   # ← this one
     restart: always
 
   api:
