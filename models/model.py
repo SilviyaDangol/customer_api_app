@@ -32,6 +32,7 @@ class Employee(Base):
     jobTitle = Column(String(50), nullable=False)
 
     office = relationship("Office", back_populates="employees")
+    customers = relationship("Customer", back_populates="employee", foreign_keys="Customer.salesRepEmployeeNumber")
 
 
 class Customer(Base):
@@ -51,6 +52,7 @@ class Customer(Base):
     salesRepEmployeeNumber = Column(Integer, nullable=True)
     creditLimit = Column(Numeric(10, 2), nullable=True)
 
+    employee = relationship("Employee", back_populates="customers", foreign_keys=[salesRepEmployeeNumber])
     orders = relationship("Order", back_populates="customer")
     payments = relationship("Payment", back_populates="customer")
 

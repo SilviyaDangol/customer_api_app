@@ -40,3 +40,62 @@ connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection re
 2026-05-12 17:37:34,419 - customer_api - INFO - Root endpoint accessed.
 2026-05-12 17:41:35,515 - customer_api - INFO - Root endpoint accessed.
 2026-05-12 17:43:17,067 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:36,257 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:39,438 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:43,023 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:46,527 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:50,099 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:54,637 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:32:57,300 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:00,008 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:03,120 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:06,589 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:10,277 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:14,693 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:20,626 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:51,018 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:33:56,618 - customer_api - INFO - Root endpoint accessed.
+2026-06-14 14:33:59,746 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:33:59,747 - customer_api - INFO - Received request to get customers (skip=0, limit=10).
+2026-06-14 14:33:59,747 - customer_api - INFO - Database query: fetch customers with skip=0, limit=10
+2026-06-14 14:33:59,861 - customer_api - INFO - Closing database connection.
+2026-06-14 14:34:03,714 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:34:03,715 - customer_api - INFO - Received request to get customers (skip=0, limit=10).
+2026-06-14 14:34:03,715 - customer_api - INFO - Database query: fetch customers with skip=0, limit=10
+2026-06-14 14:34:03,718 - customer_api - INFO - Closing database connection.
+2026-06-14 14:34:12,187 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:34:12,188 - customer_api - INFO - GET /customers/count called
+2026-06-14 14:34:12,188 - customer_api - INFO - Starting customers count query
+2026-06-14 14:34:12,192 - customer_api - ERROR - Customers count failed: object ChunkedIteratorResult can't be used in 'await' expression
+2026-06-14 14:34:12,192 - customer_api - INFO - GET /customers/count success
+2026-06-14 14:34:12,193 - customer_api - INFO - Closing database connection.
+2026-06-14 14:34:12,207 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:34:12,208 - customer_api - INFO - Received request to create a new customer.
+2026-06-14 14:34:12,208 - customer_api - INFO - Database operation: Create customer
+2026-06-14 14:34:12,233 - customer_api - INFO - Closing database connection.
+2026-06-14 14:35:02,550 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:35:08,377 - customer_api - INFO - Root endpoint accessed.
+2026-06-14 14:35:08,391 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:35:08,392 - customer_api - INFO - Received request to get customers (skip=0, limit=10).
+2026-06-14 14:35:08,392 - customer_api - INFO - Database query: fetch customers with skip=0, limit=10
+2026-06-14 14:35:08,493 - customer_api - INFO - Closing database connection.
+2026-06-14 14:35:12,231 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:35:12,232 - customer_api - INFO - Received request to create a new customer.
+2026-06-14 14:35:12,232 - customer_api - INFO - Database operation: Create customer
+2026-06-14 14:35:12,260 - customer_api - INFO - Closing database connection.
+2026-06-14 14:35:12,277 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:35:12,277 - customer_api - INFO - GET /customers/count called
+2026-06-14 14:35:12,278 - customer_api - INFO - Starting customers count query
+2026-06-14 14:35:12,282 - customer_api - ERROR - Customers count failed: object ChunkedIteratorResult can't be used in 'await' expression
+2026-06-14 14:35:12,283 - customer_api - INFO - GET /customers/count success
+2026-06-14 14:35:12,284 - customer_api - INFO - Closing database connection.
+2026-06-14 14:35:17,588 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:35:17,589 - customer_api - INFO - Received request to get customer ID 1.
+2026-06-14 14:35:17,589 - customer_api - INFO - Database query: fetch customer ID 1
+2026-06-14 14:35:17,603 - customer_api - INFO - Closing database connection.
+2026-06-14 14:36:57,304 - customer_api - INFO - Initializing FastAPI application.
+2026-06-14 14:37:03,061 - customer_api - INFO - Initializing database connection.
+2026-06-14 14:37:03,062 - customer_api - INFO - Received request to get customers (skip=0, limit=10).
+2026-06-14 14:37:03,062 - customer_api - INFO - Database query: fetch customers with skip=0, limit=10
+2026-06-14 14:37:03,134 - customer_api - INFO - Closing database connection.
+2026-06-14 21:49:48,666 - customer_api - INFO - Initializing FastAPI application.

@@ -4,7 +4,7 @@ import time
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.database import get_db
+from db.async_database import get_async_db
 from schemas.count_schema import (
     CountResponse,
     OverallCountsResponse,
@@ -23,7 +23,7 @@ from crud.counts import (
 
 from config.logger import logger
 
-router = APIRouter(prefix="/count", tags=["Counts"])
+router = APIRouter(tags=["Counts"])
 
 
 # -------------------------
@@ -31,7 +31,7 @@ router = APIRouter(prefix="/count", tags=["Counts"])
 # -------------------------
 
 @router.get("/customers/count", response_model=CountResponse)
-async def customers_count(db: AsyncSession = Depends(get_db)):
+async def customers_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /customers/count called")
 
     count = await get_customers_count(db)
@@ -42,7 +42,7 @@ async def customers_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/orders/count", response_model=CountResponse)
-async def orders_count(db: AsyncSession = Depends(get_db)):
+async def orders_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /orders/count called")
 
     count = await get_orders_count(db)
@@ -53,7 +53,7 @@ async def orders_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/products/count", response_model=CountResponse)
-async def products_count(db: AsyncSession = Depends(get_db)):
+async def products_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /products/count called")
 
     count = await get_products_count(db)
@@ -64,7 +64,7 @@ async def products_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/employees/count", response_model=CountResponse)
-async def employees_count(db: AsyncSession = Depends(get_db)):
+async def employees_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /employees/count called")
 
     count = await get_employees_count(db)
@@ -75,7 +75,7 @@ async def employees_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/offices/count", response_model=CountResponse)
-async def offices_count(db: AsyncSession = Depends(get_db)):
+async def offices_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /offices/count called")
 
     count = await get_offices_count(db)
@@ -86,7 +86,7 @@ async def offices_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/payments/count", response_model=CountResponse)
-async def payments_count(db: AsyncSession = Depends(get_db)):
+async def payments_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /payments/count called")
 
     count = await get_payments_count(db)
@@ -97,7 +97,7 @@ async def payments_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/orderdetails/count", response_model=CountResponse)
-async def orderdetails_count(db: AsyncSession = Depends(get_db)):
+async def orderdetails_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /orderdetails/count called")
 
     count = await get_orderdetails_count(db)
@@ -108,7 +108,7 @@ async def orderdetails_count(db: AsyncSession = Depends(get_db)):
 
 
 @router.get("/productlines/count", response_model=CountResponse)
-async def productlines_count(db: AsyncSession = Depends(get_db)):
+async def productlines_count(db: AsyncSession = Depends(get_async_db)):
     logger.info("GET /productlines/count called")
 
     count = await get_productlines_count(db)
@@ -126,7 +126,7 @@ async def productlines_count(db: AsyncSession = Depends(get_db)):
     "/overall_counts",
     response_model=OverallCountsResponse,
 )
-async def overall_counts(db: AsyncSession = Depends(get_db)):
+async def overall_counts(db: AsyncSession = Depends(get_async_db)):
 
     logger.info("GET /overall_counts called")
 

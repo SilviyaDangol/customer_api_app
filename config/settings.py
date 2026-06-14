@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     @property
     def async_database_url(self) -> str:
         return (
-            f"mysql+aiomysql://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}"
+            f"postgresql+asyncpg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}"
             f"@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
         )
 settings = Settings()

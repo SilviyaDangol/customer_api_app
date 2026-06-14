@@ -1,7 +1,7 @@
 from decimal import Decimal
 from typing import Optional
 
-from pydantic import field_validator, BaseModel, Field
+from pydantic import field_validator, BaseModel, Field, ConfigDict
 
 
 class ProductCreate(BaseModel):
@@ -27,8 +27,7 @@ class ProductCreate(BaseModel):
 
 
 class ProductOut(ProductCreate):
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class ProductUpdate(BaseModel):

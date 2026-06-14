@@ -6,11 +6,11 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Copy project specification files
+# Copy project specification files first for Docker layer caching
 COPY pyproject.toml /app/
 
-# Install dependencies
-RUN pip install --no-cache-dir fastapi "uvicorn[standard]" psycopg2-binary pydantic pydantic-settings sqlalchemy python-dotenv
+# Install all dependencies from pyproject.toml
+RUN pip install --no-cache-dir "fastapi[standard]" "uvicorn[standard]" psycopg2-binary pydantic pydantic-settings sqlalchemy python-dotenv asyncpg
 
 # Copy application files
 COPY . .

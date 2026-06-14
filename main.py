@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 
 from config.logger import logger
@@ -15,18 +17,22 @@ from router.payment_router import router as payment_router
 from router.counts import router as counts_router
 
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Creating database tables.")
+    Base.metadata.create_all(bind=engine)
+    yield
+
+
 # Initialize FastAPI app
 logger.info("Initializing FastAPI application.")
 
 app = FastAPI(
     title="ClassicModels API",
     description="Full REST API for ClassicModels database",
-    version="2.0.0"
+    version="2.0.0",
+    lifespan=lifespan,
 )
-
-
-# Create database tables
-Base.metadata.create_all(bind=engine)
 
 
 # Register routers

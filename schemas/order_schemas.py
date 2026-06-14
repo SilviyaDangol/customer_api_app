@@ -1,7 +1,7 @@
 from datetime import date
 from typing import Optional, Literal
 
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, field_validator, ConfigDict
 
 OrderStatus = Literal[
     "Shipped",
@@ -34,8 +34,7 @@ class OrderCreate(BaseModel):
 
 
 class OrderOut(OrderCreate):
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class OrderUpdate(BaseModel):

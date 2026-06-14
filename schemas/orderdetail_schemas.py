@@ -1,7 +1,7 @@
 from decimal import Decimal
 from typing import Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 
 class OrderDetailCreate(BaseModel):
@@ -13,8 +13,7 @@ class OrderDetailCreate(BaseModel):
 
 
 class OrderDetailOut(OrderDetailCreate):
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class OrderDetailUpdate(BaseModel):

@@ -10,9 +10,6 @@ from config.settings import settings
 from config.logger import logger
 
 
-# IMPORTANT:
-# Use async driver
-# mysql+aiomysql://
 DATABASE_URL = settings.async_database_url
 
 

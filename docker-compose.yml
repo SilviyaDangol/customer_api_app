@@ -14,7 +14,7 @@ services:
       start_period: 30s
       timeout: 10s
     volumes:
-      - ./app/sql/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+      - ./sql/seed.sql:/docker-entrypoint-initdb.d/seed.sql
     restart: always
 
   api:
